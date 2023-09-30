@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AudioPlayActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Playing Now"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TitleTextAppearance"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivMusicImage"
+        android:layout_width="@dimen/iv_music_layout_width"
+        android:layout_height="@dimen/iv_music_layout_height"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/appBarLayout"
+        android:layout_marginStart="@dimen/fab_select_music_layout_margin"
+        android:layout_marginTop="@dimen/fab_select_music_layout_margin"
+        android:layout_marginEnd="@dimen/fab_select_music_layout_margin"
+        android:layout_marginBottom="@dimen/fab_select_music_layout_margin"
+        android:src="@drawable/baseline_music_note_24"
+        app:shapeAppearanceOverlay="@style/ImageMusicStyle"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="@dimen/iv_stroke_width" />
+
+    <TextView
+        android:id="@+id/tvMusicName"
+        android:layout_width="@dimen/tv_music_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tv_music_name"
+        android:textSize="@dimen/tv_music_text_size"
+        android:fontFamily="@font/tv_artist_font_style"
+        android:layout_below="@id/ivMusicImage"/>
+
+    <SeekBar
+        android:id="@+id/musicSeekBar"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvMusicName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/fab_select_music_layout_margin"
+        android:layout_marginTop="@dimen/fab_select_music_layout_margin"
+        android:layout_marginEnd="@dimen/fab_select_music_layout_margin" />
+
+    <TextView
+        android:id="@+id/tvCurrentTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_current_time_stamp_text"
+        android:layout_below="@id/musicSeekBar"
+        android:layout_alignStart="@id/musicSeekBar"/>
+
+    <TextView
+        android:id="@+id/tvTotalDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_total_duration"
+        android:layout_below="@id/musicSeekBar"
+        android:layout_alignEnd="@id/musicSeekBar"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        app:tint="@color/black"
+        app:rippleColor="@color/gray"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/fab_select_music_layout_margin"
+        android:layout_marginTop="@dimen/fab_select_music_layout_margin"
+        android:layout_marginEnd="@dimen/fab_select_music_layout_margin"
+        android:layout_marginBottom="@dimen/fab_select_music_layout_margin"
+        android:contentDescription="@string/des_play_pause"
+        android:src="@drawable/baseline_pause_24"
+        app:fabSize="normal" />
+
+</RelativeLayout>

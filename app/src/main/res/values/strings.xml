@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ServiceOverview</string>
+    <string name="tv_display_name">Display Name</string>
+    <string name="tv_duration">2:34</string>
+    <string name="tv_artist_name">Artist Name</string>
+    <string name="des_fab">Select Music File</string>
+    <string name="tv_music_name">Music Name</string>
+    <string name="des_play_pause">Play Pause</string>
+    <string name="tv_current_time_stamp_text">1:56</string>
+    <string name="tv_total_duration">3:00</string>
+</resources>
