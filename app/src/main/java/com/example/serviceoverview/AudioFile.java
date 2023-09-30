@@ -1,13 +1,11 @@
 package com.example.serviceoverview;
 
-import android.database.Cursor;
-
 import androidx.annotation.NonNull;
 
 public class AudioFile {
     private String title;
     private String displayName;
-    private long id;
+    private long musicId;
     private int durationInMS;
     private String artist;
 
@@ -17,7 +15,7 @@ public class AudioFile {
     public AudioFile(String title, String displayName, long id, int durationInMS, String artist) {
         this.title = title;
         this.displayName = displayName;
-        this.id = id;
+        this.musicId = id;
         this.durationInMS = durationInMS;
         this.artist = artist;
     }
@@ -38,12 +36,12 @@ public class AudioFile {
         this.displayName = displayName;
     }
 
-    public long getId() {
-        return id;
+    public long getMusicId() {
+        return musicId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setMusicId(long musicId) {
+        this.musicId = musicId;
     }
 
     public int getDurationInMS() {
@@ -68,7 +66,7 @@ public class AudioFile {
         return "AudioFile{" +
                 "title='" + title + '\'' +
                 ", displayName='" + displayName + '\'' +
-                ", id=" + id +
+                ", id=" + musicId +
                 ", durationInMS=" + durationInMS +
                 ", artist='" + artist + '\'' +
                 '}';
